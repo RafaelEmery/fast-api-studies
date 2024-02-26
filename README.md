@@ -57,4 +57,4 @@ python main.py
 
 
 ---
-Made with :heart: for RafaelEmery studies.
+Made with :heart: by RafaelEmery for studies.
