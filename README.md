@@ -21,7 +21,7 @@ Simple API to apply basic concepts of Fast API.
 
 ### `fast-api-sqlalchemy-api`
 
-API to manage courses using SQLAlchemy as database along with Fast API resources.
+API to manage courses using SQLAlchemy with Fast API resources.
 
 The database is PostgreSQL by Docker and Docker Compose to make local development easier :smiley:
 
@@ -35,6 +35,10 @@ or
 ```bash
 python create_tables.py
 ```
+
+### `fast-api-sqlmodel-api`
+
+API similar to `fast-api-sqlalchemy-api` to manage courses but using SQLModel Fast API resources.
 
 ## Local running
 
