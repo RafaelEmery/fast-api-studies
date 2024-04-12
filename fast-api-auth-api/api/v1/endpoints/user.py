@@ -14,7 +14,7 @@ from models.user import User as UserModel
 from schemas.user import BaseUser, UserCreate, UserUpdate, UserArticles
 
 from core.deps import get_session, get_current_user
-from core.security import generate_hash_password, verify_password
+from core.security import generate_hash_password
 from core.auth import authenticate, create_access_token
 
 

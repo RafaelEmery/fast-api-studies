@@ -17,6 +17,7 @@ from core.security import verify_password
 from pydantic import EmailStr
 
 
+# Endpoint to get bearer token
 oauth2_schema = OAuth2PasswordBearer(
     tokenUrl="{settings.API_V1_STR}/users/login"
 )
@@ -33,8 +34,21 @@ async def authenticate(email: EmailStr, password: str, db: AsyncSession) -> Opti
         return user
 
 
+def create_access_token(sub: str) -> str:
+    """
+    More info at https://jwt.io
+    """
+    return _create_token(
+        type="access_token",
+        expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES), 
+        sub=sub
+    )
+
+
 def _create_token(type: str, expires_delta: timedelta, sub: str) -> str:
-    # More info at https://datatracker.ietf.org/doc/html/rfc7519#sectom-4.1.3
+    """
+    More info at https://datatracker.ietf.org/doc/html/rfc7519#sectom-4.1.3
+    """
     payload = {}
     
     tz = timezone("America/Sao_Paulo")
@@ -47,14 +61,3 @@ def _create_token(type: str, expires_delta: timedelta, sub: str) -> str:
     payload["sub"] = sub # Subject
 
     return jwt.encode(payload, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
-
-
-def create_access_token(sub: str) -> str:
-    """
-    More info at https://jwt.io
-    """
-    return _create_token(
-        type="access_token",
-        expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES), 
-        sub=sub
-    )
