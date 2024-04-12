@@ -25,13 +25,8 @@ API to manage courses using SQLAlchemy with Fast API resources.
 
 The database is PostgreSQL by Docker and Docker Compose to make local development easier :smiley:
 
-The tables are defined at `create_tables.py` and to create you'll need to run
+The tables are defined at `create_tables.py` and to create you'll need to run:
 
-```bash
-# If Makefile exists and command is defined
-make create-tables
-```
-or 
 ```bash
 python create_tables.py
 ```
@@ -39,6 +34,10 @@ python create_tables.py
 ### `fast-api-sqlmodel-api`
 
 API similar to `fast-api-sqlalchemy-api` to manage courses but using SQLModel Fast API resources.
+
+### `fast-api-auth-api`
+
+API to handle authentication by JWT.
 
 ## Local running
 
@@ -49,16 +48,8 @@ API similar to `fast-api-sqlalchemy-api` to manage courses but using SQLModel Fa
 When it's all set up, run:
 
 ```bash
-# If Makefile exists and command is defined
-make run
-```
-or 
-
-```bash
 python main.py
 ```
-
-
 
 ---
 Made with :heart: by RafaelEmery for studies.
