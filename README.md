@@ -1,6 +1,6 @@
 # Fast API Studies
 
-Projects to study Fast API, a Python framework for building fast and well documented APIs :rocket:
+Projects to study FastAPI, a Python framework for building fast and well documented APIs :rocket:
 
 ## :key: Requirements
 
@@ -13,15 +13,15 @@ Projects to study Fast API, a Python framework for building fast and well docume
 
 ### `fast-api-starting-api`
 
-Simple API to run Fast API.
+Simple API to run FastAPI.
 
 ### `fast-api-learning-api`
 
-Simple API to apply basic concepts of Fast API.
+Simple API to apply basic concepts of FastAPI.
 
 ### `fast-api-sqlalchemy-api`
 
-API to manage courses using SQLAlchemy with Fast API resources.
+API to manage courses using SQLAlchemy with FastAPI resources.
 
 The database is PostgreSQL by Docker and Docker Compose to make local development easier :smiley:
 
@@ -33,7 +33,7 @@ python create_tables.py
 
 ### `fast-api-sqlmodel-api`
 
-API similar to `fast-api-sqlalchemy-api` to manage courses but using SQLModel Fast API resources.
+API similar to `fast-api-sqlalchemy-api` to manage courses but using SQLModel FastAPI resources.
 
 ### `fast-api-auth-api`
 
